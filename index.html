@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyect</title>
+</head>
+<body>
+    <canvas width="600" height="600"></canvas>
+    <script> 
+    let canvas = document.querySelector('canvas');
+    let context = canvas.getContext('2d');
+
+    context.fillStyle = 'red';
+    //context.fillRect(100,100,400,400);
+
+
+
+    context.lineWidth=2;
+    context.beginPath(); 
+    context.rect(100,100,400,400); 
+    //context.stroke();
+
+    
+    context.beginPath(); 
+    context.arc(300,300,100,0,2 * Math.PI);
+   // context.stroke();
+    
+   const  w= 50, h= 50, gap= 20; 
+   let x, y; 
+
+for(let i=0; i < 5; i++){
+    for(let j=0; j < 5; j++){
+    x= 100+(w + gap)* i;
+    y= 100+(h + gap)*j; 
+
+    context.beginPath(); 
+    context.rect(x, y, w, h); 
+    context.stroke();
+
+    if(Math.random() > 0.5 ){
+
+    context.beginPath(); 
+    context.arc(x+25,y+25,20,0,2 * Math.PI);
+    context.stroke();
+         } 
+    }
+}
+
+
+    /*circle
+    context.beginPath(); 
+    context.arc(300,100,100,0 * Math.PI, 1 * Math.PI);
+    context.stroke();
+
+    context.beginPath(); 
+    context.arc(300,200,100,0 ,2 * Math.PI);
+    context.stroke();
+  
+   
+    context.beginPath(); 
+    context.arc(300,400,100,2 * Math.PI, 0);
+    context.stroke();
+
+    context.beginPath(); 
+    context.arc(300,500,100,1 * Math.PI, 0);
+    context.stroke();
+    */
+
+    let z= 2042; 
+
+    function doSomething(param){
+        console.log(param);
+    }
+
+    doSomething(z)
+
+    function add(a,b){ 
+        return a+b; 
+    }
+    
+    let result= add(5,7); 
+    console.log(result); 
+
+    let multiply = (a,b)=>{
+        return a*b; 
+    }
+
+    console.log(multiply(5,7));
+    
+    let years = [2022, 2023, 2024];
+
+
+    for(let i = 0; i < years.length; i++){
+        console.log(years[i]);
+    }
+
+
+
+
+
+
+    </script>
+</body>
+</html>
